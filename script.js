@@ -13,7 +13,7 @@ function staticLoadPlaces() {
                 lng: -75.514650,
             },
             index: 0
-        },
+        }/*,
         {
             name: 'Giant',
             location: {
@@ -21,7 +21,7 @@ function staticLoadPlaces() {
                 lng: -75.532028,
             },
             index: 1
-        },
+        },*/
     ];
 }
 
