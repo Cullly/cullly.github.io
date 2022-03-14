@@ -11,7 +11,9 @@ function staticLoadPlaces() {
                 lat: 40.129829,
                 lng: -75.514650,
             },
-            index: 0
+            scale: '0.5 0.5 0.5',
+            info: 'Library',
+            material: 'color: yellow'
         },
         {
             name: 'Giant',
@@ -19,39 +21,28 @@ function staticLoadPlaces() {
                 lat: 40.134540,
                 lng: -75.532028,
             },
-            index: 1
-        },
+            scale: '0.4 0.4 0.4',
+            info: 'Giant',
+            material: 'color: green'
+        }
     ];
 }
 
-var models = [
-    {
-        scale: '0.5 0.5 0.5',
-        info: 'Library',
-        material: 'color: yellow'
-    },
-    {
-        scale: '0.4 0.4 0.4',
-        info: 'Giant',
-        material: 'color: green'
-    }
-];
-
-var setModel = function (model, entity) {
-    if (model.scale) {
-        entity.setAttribute('scale', model.scale);
+var setModel = function (place, entity) {
+    if (place.scale) {
+        entity.setAttribute('scale', place.scale);
     }
     
-    if (model.material) {
-        entity.setAttribute('material', model.material);
+    if (place.material) {
+        entity.setAttribute('material', place.material);
     }
 
-    if (model.position) {
-        entity.setAttribute('position', model.position);
+    if (place.position) {
+        entity.setAttribute('position', place.position);
     }
   
     const div = document.querySelector('.instructions');
-    div.innerText = model.info;
+    div.innerText = place.info;
 };
 
 function renderPlaces(places) {
@@ -64,7 +55,7 @@ function renderPlaces(places) {
         let model = document.createElement('a-box');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
-        setModel(models[place.index], model);
+        setModel(place, model);
 
         scene.appendChild(model);
     });
