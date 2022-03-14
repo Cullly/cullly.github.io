@@ -14,7 +14,7 @@ function staticLoadPlaces() {
             scale: '0.5 0.5 0.5',
             info: 'Library',
             material: 'color: yellow'
-        },
+        }/*,
         {
             name: 'Giant',
             location: {
@@ -24,7 +24,7 @@ function staticLoadPlaces() {
             scale: '0.4 0.4 0.4',
             info: 'Giant',
             material: 'color: green'
-        }
+        }*/
     ];
 }
 
