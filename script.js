@@ -1,7 +1,6 @@
 window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
-    alert('Hi');
 };
 
 function staticLoadPlaces() {
@@ -13,7 +12,7 @@ function staticLoadPlaces() {
                 lng: -75.514650,
             },
             index: 0
-        }/*,
+        },
         {
             name: 'Giant',
             location: {
@@ -21,7 +20,7 @@ function staticLoadPlaces() {
                 lng: -75.532028,
             },
             index: 1
-        },*/
+        },
     ];
 }
 
@@ -65,8 +64,6 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(models[place.index], model);
-        const distanceMsg = model.getAttribute('distanceMsg');
-        console.log(place.name + " is " + distanceMsg + " away");
 
         scene.appendChild(model);
     });
