@@ -1,6 +1,7 @@
 window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
+    alert('Hi');
 };
 
 function staticLoadPlaces() {
@@ -13,6 +14,14 @@ function staticLoadPlaces() {
             },
             index: 0
         },
+        {
+            name: 'Giant',
+            location: {
+                lat: 40.134540,
+                lng: -75.532028,
+            },
+            index: 1
+        },
     ];
 }
 
@@ -20,7 +29,11 @@ var models = [
     {
         scale: '0.5 0.5 0.5',
         info: 'Library',
-        rotation: '0 180 0',
+        material: 'color: yellow'
+    },
+    {
+        info: 'Giant',
+        material: 'color: green'
     }
 ];
 
@@ -28,9 +41,9 @@ var setModel = function (model, entity) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
     }
-
-    if (model.rotation) {
-        entity.setAttribute('rotation', model.rotation);
+    
+    if (model.material) {
+        entity.setAttribute('material', model.material);
     }
 
     if (model.position) {
