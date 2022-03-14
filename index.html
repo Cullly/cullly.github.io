@@ -18,8 +18,7 @@
       embedded
       arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
     >
-      <a-box material="color: yellow" gps-entity-place="latitude: 40.136150; longitude: -75.513800"/>
-      <a-camera gps-camera="minDistance: 40;" rotation-reader></a-camera>
+      <a-camera look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera="alert: true; minDistance: 40;" rotation-reader></a-camera>
     </a-scene>
   </body>
 </html>
