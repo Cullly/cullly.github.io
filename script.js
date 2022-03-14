@@ -31,6 +31,7 @@ var models = [
         material: 'color: yellow'
     },
     {
+        scale: '0.4 0.4 0.4',
         info: 'Giant',
         material: 'color: green'
     }
