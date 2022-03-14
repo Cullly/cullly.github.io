@@ -47,7 +47,7 @@ var setModel = function (place, entity) {
 
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
-
+    console.log('Loading places...');
     places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
@@ -56,7 +56,7 @@ function renderPlaces(places) {
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(place, model);
-
+        console.log(model);
         scene.appendChild(model);
     });
 }
