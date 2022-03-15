@@ -22,10 +22,11 @@
         const coordinates = "Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude;
         const div = document.querySelector('.coordinates');
         div.innerText = coordinates;
-      });
-      window.addEventListener('click', e => {
-        const elements = document.querySelector('[gps-projected-entity-place]')
-        console.log(elements.getAttribute('distanceMsg'));
+        const stops = document.querySelectorAll('[gps-projected-entity-place]')
+        stops.forEach((stop) => {
+          console.log(stop);
+          console.log(stop.getAttribute('distanceMsg'));
+        });
       });
     </script>
     <script src="./artstop.js"></script>
