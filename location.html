@@ -6,16 +6,21 @@
     <title>GeoAR.js demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="./aframe-ar-nft.js"></script>
+    <script>
+      window.addEventListener('gps-camera-update-position', e => {
+        console.log('Long: ' + e.detail.position.longitude + ", Lat: " + e.detail.position.latitude);
+      });
+    </script>
   </head>
 
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;" renderer='antialias: true; alpha: true'>
-      <a-box material="color: blue" gps-projected-entity-place="latitude: 40.128512; longitude: -75.513169" scale='10 10 10'/>
-      <!--
-      <a-box material="color: red" gps-projected-entity-place="latitude: 40.134122; longitude: -75.536300" scale='10 10 10'/>
-      <a-box material="color: yellow" gps-projected-entity-place="latitude: 40.136245; longitude: -75.514758" scale='10 10 10'/>
-      -->
+  <body>
+    <a-scene stats vr-mode-ui="enabled: false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>
       <a-camera gps-projected-camera rotation-reader></a-camera>
+      <!--
+      <a-box material="color: blue" gps-projected-entity-place="latitude: 40.128512; longitude: -75.513169" scale='10 10 10'/>
+      <a-box material="color: red" gps-projected-entity-place="latitude: 40.134122; longitude: -75.536300" scale='10 10 10'/>
+      -->
+      <a-box material='color: yellow' gps-projected-entity-place='latitude: 40.136245; longitude: -75.514758' scale='10 10 10'/>
     </a-scene>
   </body>
 </html>
