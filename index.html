@@ -23,6 +23,13 @@
         const div = document.querySelector('.coordinates');
         div.innerText = coordinates;
       });
+      window.addEventListener('click', e => {
+        const elements = document.getElementsByTagName('a-box');
+        elements.forEach((element) => {
+          console.log(element);
+          console.log(element.getAttribute('distanceMsg'));
+        });
+      });
     </script>
     <script src="./artstop.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
