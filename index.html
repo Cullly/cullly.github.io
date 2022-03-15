@@ -16,12 +16,16 @@
         console.log(e);
       });
       window.addEventListener('camera-error', e => {
-        console.log(e);
+        console.error(e);
       });
       window.addEventListener('gps-camera-update-position', e => {
         const coordinates = "Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude;
         const div = document.querySelector('.coordinates');
         div.innerText = coordinates;
+      });
+      window.addEventListener('click', e => {
+        const div = document.querySelector('.coordinates');
+        div.innerText = e.detail;
       });
     </script>
     <script src="./artstop.js"></script>
