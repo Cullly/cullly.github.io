@@ -32,7 +32,7 @@
   <body>
     <div class="centered coordinates"></div>
     <a-scene stats vr-mode-ui="enabled: false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>
-      <a-camera gps-projected-camera rotation-reader look-controls-enabled='false' look-controls="reverseMouseDrag:true; touchEnabled: false" arjs-look-controls='smoothingFactor: 0.1'></a-camera>
+      <a-camera gps-projected-camera rotation-reader look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1; touchEnabled: false'></a-camera>
       <a-box material="color: blue" artstop="name: Phoenixville Library" gps-projected-entity-place="latitude: 40.128512; longitude: -75.513169" scale='10 10 10'></a-box>
       <a-box material="color: red" artstop="name: Giant" gps-projected-entity-place="latitude: 40.134122; longitude: -75.536300" scale='10 10 10'></a-box>
       <a-box material='color: yellow' artstop="name: Riverworks" gps-projected-entity-place='latitude: 40.136245; longitude: -75.514758' scale='10 10 10'></a-box>
