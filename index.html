@@ -24,9 +24,8 @@
         div.innerText = coordinates;
       });
       window.addEventListener('click', e => {
-        const elements = document.getElementsByTagName('a-box');
+        const elements = document.querySelector('[gps-projected-entity-place]')
         console.log(elements);
-        console.log(elements.length);
       });
     </script>
     <script src="./artstop.js"></script>
