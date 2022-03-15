@@ -19,8 +19,10 @@
         console.log(e);
       });
       window.addEventListener('gps-camera-update-position', e => {
-        console.log("Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude);
-        
+        const coordinates = "Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude;
+        console.log(coordinates);
+        const div = document.querySelector('.coordinates');
+        div.innerText = coordinates;
       });
     </script>
     <script src="./artstop.js"></script>
