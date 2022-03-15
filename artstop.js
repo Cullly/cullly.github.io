@@ -4,5 +4,11 @@ AFRAME.registerComponent('artstop', {
     },
     init: function() {
         console.log('Initializing: ' + this.data.name);
+        this.addEventListener('click', function(ev, target) {
+            const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+            if (aEntity && intersectedElement === aEntity) {
+                console.log('Clicked: ' + this.data.name);
+            }
+        });
     }
 });
