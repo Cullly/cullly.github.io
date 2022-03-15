@@ -17,9 +17,9 @@
       embedded
       arjs="sourceType: webcam; videoTexture: true; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
     >
-      <a-box material="color: blue" gps-entity-place="latitude: 40.128512; longitude: -75.513169" scale='1 1 1'/>
-      <a-box material="color: red" gps-entity-place="latitude: 40.134122; longitude: -75.536300" scale='120 120 120'/>
-      <a-camera look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-camera="alert: true; minDistance: 0;" rotation-reader></a-camera>
+      <a-box material="color: blue" gps-projected-entity-place="latitude: 40.128512; longitude: -75.513169" scale='1 1 1'/>
+      <a-box material="color: red" gps-projected-entity-place="latitude: 40.134122; longitude: -75.536300" scale='120 120 120'/>
+      <a-camera look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1' gps-projected-camera="alert: true; minDistance: 0;" rotation-reader></a-camera>
     </a-scene>
   </body>
 </html>
