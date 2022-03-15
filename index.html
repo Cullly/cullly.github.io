@@ -20,7 +20,6 @@
       });
       window.addEventListener('gps-camera-update-position', e => {
         const coordinates = "Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude;
-        console.log(coordinates);
         const div = document.querySelector('.coordinates');
         div.innerText = coordinates;
       });
