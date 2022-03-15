@@ -24,7 +24,8 @@
         div.innerText = coordinates;
         const stops = document.querySelectorAll('[gps-projected-entity-place]')
         stops.forEach((stop) => {
-          console.log(stop.getAttribute('artstop').getAttribute('name') + ' is ' + stop.getAttribute('distanceMsg') + ' away');
+          console.log(stop.getAttribute('artstop').data.name);
+          console.log(stop.getAttribute('artstop').name + ' is ' + stop.getAttribute('distanceMsg') + ' away');
         });
       });
     </script>
