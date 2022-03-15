@@ -19,13 +19,16 @@
         console.log(e);
       });
       window.addEventListener('gps-camera-update-position', e => {
-        console.log('Long: ' + e.detail.position.longitude + ", Lat: " + e.detail.position.latitude);
+        console.log("Lat: " + e.detail.position.latitude + ', Long: ' + e.detail.position.longitude);
+        
       });
     </script>
     <script src="./artstop.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
   </head>
 
   <body>
+    <div class="centered coordinates"></div>
     <a-scene stats vr-mode-ui="enabled: false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>
       <a-camera gps-projected-camera rotation-reader look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'></a-camera>
       <a-box material="color: blue" artstop="name: Phoenixville Library" gps-projected-entity-place="latitude: 40.128512; longitude: -75.513169" scale='10 10 10'></a-box>
