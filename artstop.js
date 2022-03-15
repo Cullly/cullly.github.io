@@ -3,6 +3,6 @@ AFRAME.registerComponent('artstop', {
       name: {type: 'string'}
     },
     init: function() {
-        alert('Initializing Art Stop: ' + this.data.name);
+        console.log('Initializing: ' + this.data.name);
     }
 });
