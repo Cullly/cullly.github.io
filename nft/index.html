@@ -4,8 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>GeoAR.js demo</title>
+    <!--
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
+    -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="./aframe-ar-nft.js"></script>
     <script>
@@ -15,9 +17,11 @@
       });
       window.addEventListener("markerFound", (event) => {
         console.log('found ' + event);
+        alert('found ' + event);
       });
       window.addEventListener("markerLost", (event) => {
         console.log('lost ' + event);
+        alert('lost ' + event);
       });
     </script>
     <style>
@@ -49,7 +53,7 @@
    
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
       <a-entity camera></a-entity>      
-      <a-nft type="nft" url="ntf/cube" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" emitevents='true'>
+      <a-nft type="nft" url="cube" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" emitevents='true'>
         <a-box material='color: yellow' scale="10 10 10"></a-box>
       </a-nft>
     </a-scene>
