@@ -12,13 +12,13 @@ const threex = new THREEx.LocationBased(scene, camera);
 const cam = new THREEx.WebcamRenderer(renderer, '#video1');
 
 const material1 = new THREE.MeshBasicMaterial({color: 0xff0000});
-threex.add(new THREE.Mesh(geom, material1), -0.72, 51.051);
+threex.add(new THREE.Mesh(geom, material1), -75.513169, 40.128512);
 
 const material2 = new THREE.MeshBasicMaterial({color: 0xffff00});
-threex.add(new THREE.Mesh(geom, material2), -0.72, 51.049);
+threex.add(new THREE.Mesh(geom, material2), -75.536300, 40.134122);
 
 const material3 = new THREE.MeshBasicMaterial({color: 0x0000ff});
-threex.add(new THREE.Mesh(geom, material3), -0.722, 51.05);
+threex.add(new THREE.Mesh(geom, material3), -75.514758, 40.136246);
 
 let orientationControls;
 
@@ -35,17 +35,17 @@ if (isMobile()) {
         })
         if (navigator.geolocation.getCurrentPosition(()=>{}) == null) {
            console.log('geolocation not enabled use fakeGps');
-           threex.fakeGps(-0.72, 51.05);
+           threex.fakeGps(-75.51, 40.135);
         }   
     } else {
-        threex.fakeGps(-0.72, 51.05);
+        threex.fakeGps(-75.51, 40.135);
     }
 
     threex.on("gpsupdate", pos => {
         console.log(`${pos.coords.latitude} ${pos.coords.longitude}`);
     });
 } else {
-    threex.fakeGps(-0.72, 51.05);
+    threex.fakeGps(-75.51, 40.135);
     threex.on("gpsupdate", pos => {
         console.log(`${pos.coords.latitude} ${pos.coords.longitude}`);
     });
